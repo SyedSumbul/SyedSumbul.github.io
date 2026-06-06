@@ -19,6 +19,7 @@ nav {
   padding: 18px 0;
   border-bottom: 1px solid #ddd;
   text-align: center;
+  z-index: 1000;
 }
 
 nav a {
@@ -35,6 +36,104 @@ nav a:hover {
 section {
   padding: 55px 0;
   border-bottom: 1px solid #eee;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  border: 3px solid #ddd;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  color: #555;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 28px;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+a {
+  color: #0056b3;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  margin: 18px 0;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* Education section */
+
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 22px 0;
+}
+
+.education-icon {
+  font-size: 24px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.degree {
+  font-size: 1.05em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.institution {
+  font-size: 0.95em;
+  color: #666;
+  margin: 3px 0 0 0;
+}
+
+/* Contact icons */
+
+.contact-icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.contact-icons a {
+  font-size: 34px;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.contact-icons a:hover {
+  color: #003f82;
+}  border-bottom: 1px solid #eee;
 }
 
 .hero {
