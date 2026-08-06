@@ -1,196 +1,269 @@
+/* ------------------------------
+   Basic setup
+------------------------------ */
+
+:root {
+  --text-color: #222222;
+  --muted-text: #626262;
+  --link-color: #0056b3;
+  --link-hover: #003f82;
+  --border-color: #dddddd;
+  --light-border: #eeeeee;
+  --card-background: #fafafa;
+  --page-background: #ffffff;
+  --content-width: 900px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px 40px 24px;
-  line-height: 1.6;
-  color: #222;
-  background-color: #ffffff;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-color);
+  background-color: var(--page-background);
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+
+/* ------------------------------
+   Navigation
+------------------------------ */
 
 nav {
   position: sticky;
   top: 0;
-  background-color: white;
-  padding: 18px 0;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
   z-index: 1000;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+
+  width: 100%;
+  padding: 16px 24px;
+
+  background-color: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
-  margin: 0 12px;
-  color: #0056b3;
+  color: var(--link-color);
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav a:hover {
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
-section {
-  padding: 55px 0;
-  border-bottom: 1px solid #eee;
+nav a:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
+
+/* ------------------------------
+   Main sections
+------------------------------ */
+
+section {
+  width: min(calc(100% - 40px), var(--content-width));
+  margin: 0 auto;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--light-border);
+
+  /* Prevents sticky navigation from covering headings */
+  scroll-margin-top: 90px;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 6vw, 3rem);
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-size: clamp(1.65rem, 4vw, 2rem);
+}
+
+h3 {
+  margin: 28px 0 10px;
+  font-size: 1.15rem;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+ul {
+  margin: 12px 0 0;
+  padding-left: 22px;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+
+/* ------------------------------
+   Home section
+------------------------------ */
+
 .hero {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 70vh;
   padding-top: 80px;
   padding-bottom: 80px;
+  text-align: center;
 }
 
 .profile-photo {
-  width: 180px;
-  height: 180px;
+  width: clamp(150px, 30vw, 190px);
+  aspect-ratio: 1 / 1;
+  margin-bottom: 26px;
+
   object-fit: cover;
+  border: 3px solid var(--border-color);
   border-radius: 50%;
-  margin-bottom: 25px;
-  border: 3px solid #ddd;
 }
 
 .hero h1 {
-  font-size: 2.8em;
   margin-bottom: 10px;
 }
 
 .hero h2 {
-  font-size: 1.3em;
-  font-weight: normal;
-  color: #555;
+  margin-bottom: 8px;
+  color: var(--muted-text);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-weight: 400;
 }
 
-h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
+.hero p {
+  color: var(--muted-text);
 }
 
-h3 {
-  margin-top: 28px;
-}
 
-ul {
-  padding-left: 22px;
-}
-
-a {
-  color: #0056b3;
-}
-
-.card {
-  border: 1px solid #ddd;
-  padding: 18px;
-  margin: 18px 0;
-  border-radius: 8px;
-  background-color: #fafafa;
-}
-
-/* Education section */
+/* ------------------------------
+   Education
+------------------------------ */
 
 .education-item {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  margin: 22px 0;
+  margin: 24px 0;
 }
 
 .education-icon {
-  font-size: 24px;
-  color: #555;
-  margin-top: 4px;
+  flex: 0 0 auto;
+  margin-top: 5px;
+  color: var(--muted-text);
+  font-size: 1.4rem;
+}
+
+.education-item > div {
+  min-width: 0;
 }
 
 .degree {
-  font-size: 1.05em;
-  font-weight: bold;
   margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
 }
 
 .institution {
-  font-size: 0.95em;
-  color: #666;
-  margin: 3px 0 0 0;
+  margin: 3px 0 0;
+  color: var(--muted-text);
+  font-size: 0.94rem;
 }
 
-/* Contact icons */
 
-.contact-icons {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  margin-top: 15px;
-}
-
-.contact-icons a {
-  font-size: 34px;
-  color: #0056b3;
-  text-decoration: none;
-}
-
-.contact-icons a:hover {
-  color: #003f82;
-}  border-bottom: 1px solid #eee;
-}
-
-.hero {
-  text-align: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.hero h1 {
-  font-size: 2.8em;
-  margin-bottom: 10px;
-}
-
-.hero h2 {
-  font-size: 1.3em;
-  font-weight: normal;
-  color: #555;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-
-h3 {
-  margin-top: 28px;
-}
+/* ------------------------------
+   Project cards
+------------------------------ */
 
 .card {
-  border: 1px solid #ddd;
-  padding: 18px;
-  margin: 18px 0;
+  margin: 20px 0;
+  padding: 22px;
+
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: #fafafa;
 }
 
-ul {
-  padding-left: 22px;
+.card h3 {
+  margin-top: 0;
 }
 
-a {
-  color: #0056b3;
+.card p:last-child {
+  margin-bottom: 0;
 }
-/* Skills section */
+
+
+/* ------------------------------
+   Skills
+------------------------------ */
 
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 22px;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .skill-card {
-  border: 1px solid #ddd;
-  padding: 20px;
+  min-width: 0;
+  padding: 22px;
+
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: #fafafa;
 }
 
 .skill-card h3 {
@@ -201,9 +274,124 @@ a {
   margin-bottom: 0;
 }
 
-/* Make skills stack nicely on phones */
+
+/* ------------------------------
+   Contact
+------------------------------ */
+
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 44px;
+  min-height: 44px;
+
+  color: var(--link-color);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.contact-icons a:hover {
+  color: var(--link-hover);
+  transform: translateY(-2px);
+}
+
+.contact-icons a:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+
+/* ------------------------------
+   Tablets and phones
+------------------------------ */
+
 @media (max-width: 700px) {
+  nav {
+    gap: 8px 16px;
+    padding: 13px 16px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  section {
+    width: min(calc(100% - 32px), var(--content-width));
+    padding: 48px 0;
+    scroll-margin-top: 110px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* ------------------------------
+   Smaller phones
+------------------------------ */
+
+@media (max-width: 420px) {
+  nav {
+    gap: 6px 12px;
+    padding: 12px;
+  }
+
+  nav a {
+    font-size: 0.84rem;
+  }
+
+  section {
+    width: calc(100% - 28px);
+    padding: 42px 0;
+  }
+
+  .education-item {
+    gap: 12px;
+  }
+
+  .card,
+  .skill-card {
+    padding: 18px;
+  }
+
+  .contact-icons {
+    gap: 16px;
+  }
+
+  .contact-icons a {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* ------------------------------
+   Reduced-motion accessibility
+------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .contact-icons a:hover {
+    transform: none;
   }
 }
