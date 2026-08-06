@@ -2,197 +2,535 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sumbul Syed</title>
-  <link rel="stylesheet" href="style.css">
 
-  <!-- Icons for email, LinkedIn, and graduation cap -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Personal website of Sumbul Syed, a behavioural science researcher working across sustainability, computational modelling, open science, academic publishing, and science communication."
+  >
+
+  <title>Sumbul Syed</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#biography">Biography</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- SVG icon library: no external package required -->
+  <svg class="svg-definitions" aria-hidden="true">
 
-  <section id="home" class="hero">
-    <img src="profile.jpg" alt="Photo of Sumbul Syed" class="profile-photo">
+    <symbol id="icon-email" viewBox="0 0 24 24">
+      <path d="M3 5h18v14H3V5zm2 2v.4l7 5.25L19 7.4V7H5zm14 10V9.9l-7 5.25L5 9.9V17h14z"/>
+    </symbol>
 
-    <h1>Sumbul Syed</h1>
-    <h2>Research Master’s Student in Behavioural Science</h2>
-    <p>Radboud University, Nijmegen</p>
-  </section>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path d="M5.2 7.2A2.1 2.1 0 1 0 5.2 3a2.1 2.1 0 0 0 0 4.2zM3.4 8.8H7V21H3.4V8.8zm5.8 0h3.45v1.67h.05c.48-.91 1.65-1.87 3.4-1.87 3.64 0 4.31 2.4 4.31 5.51V21h-3.59v-6.11c0-1.46-.03-3.34-2.03-3.34-2.04 0-2.35 1.59-2.35 3.23V21H9.2V8.8z"/>
+    </symbol>
 
-  <section id="biography">
-    <h2>Biography</h2>
-    <p>
-      I am a Research Master’s student in Behavioural Science at Radboud University in the Netherlands. My prior academic training was in Economics and Psychology. Broadly, I am interested in climate change, behaviour change, complex systems
-      approach in social sciences, and open research practices.
-    </p>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2zm10.15 1.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+    </symbol>
 
-    <h3>Research Interests</h3>
-    <ul>
-      <li>Climate change </li>
-      <li>Sustainable decision-making</li>
-      <li>Complex systems approach</li>
-      <li>Open research practices</li>
-    </ul>
+    <symbol id="icon-youtube" viewBox="0 0 24 24">
+      <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.65 4.6 12 4.6 12 4.6s-5.65 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.85.5 7.5.5 7.5.5s5.65 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+    </symbol>
 
-    <h3>Education</h3>
+    <symbol id="icon-substack" viewBox="0 0 24 24">
+      <path d="M4 3h16v2H4V3zm0 4h16v2H4V7zm0 4h16v2H4v-2zm1 4h14v7l-7-4-7 4v-7z"/>
+    </symbol>
 
-    <div class="education-item">
-      <i class="fa-solid fa-graduation-cap education-icon"></i>
-      <div>
-        <p class="degree">Research Master’s Behavioural Science</p>
-        <p class="institution">Radboud University, The Netherlands</p>
-      </div>
-    </div>
+    <symbol id="icon-graduation" viewBox="0 0 24 24">
+      <path d="M12 3 1 8l11 5 9-4.09V16h2V8L12 3zm-6 8.18V16c0 2.2 2.69 4 6 4s6-1.8 6-4v-4.82l-6 2.73-6-2.73z"/>
+    </symbol>
 
-    <div class="education-item">
-      <i class="fa-solid fa-graduation-cap education-icon"></i>
-      <div>
-        <p class="degree">MSc Psychology of Mental Health</p>
-        <p class="institution">University of Edinburgh, Scotland</p>
-      </div>
-    </div>
+  </svg>
 
-    <div class="education-item">
-      <i class="fa-solid fa-graduation-cap education-icon"></i>
-      <div>
-        <p class="degree">PG Diploma Counselling Psychology</p>
-        <p class="institution">Amity University, India</p>
-      </div>
-    </div>
 
-    <div class="education-item">
-      <i class="fa-solid fa-graduation-cap education-icon"></i>
-      <div>
-        <p class="degree">BA (Honours) Economics</p>
-        <p class="institution">Amity University, India</p>
-      </div>
-    </div>
-  </section>
+  <!-- Navigation -->
+  <header class="site-header">
 
-  <section id="projects">
-    <h2>Selected Projects</h2>
+    <div class="nav-container">
 
-    <div class="card">
-      <h3>Plant-based Food Choices on University Campuses</h3>
-      <p>
-        A behaviour change proposal focused on increasing plant-based food choices
-        among students and staff using value-based decision-making.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Message Framing to Reduce Meat Consumption</h3>
-      <p>
-        A research proposal examining environmental and animal welfare framing in
-        behavioural intentions to reduce meat consumption.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Sense of Agency in Schizophrenia</h3>
-      <p>
-        A critical essay exploring predictive and postdictive accounts of altered
-        sense of agency in schizophrenia, including ethical and philosophical implications.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Depression Beyond the Chemical Imbalance Account</h3>
-      <p>
-        A critical essay examining the monoamine hypothesis of depression, neuroplasticity,
-        treatment response, and personalised approaches to mental health.
-      </p>
-    </div>
-  </section>
-
-  <section id="experience">
-  <h2>Skills</h2>
-
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <h3>Research Skills</h3>
-      <ul>
-        <li>Literature review and Academic writing</li>
-        <li>Research proposal development</li>
-        <li>Pre-registration and Open science practices</li>
-        <li>Data preprocessing and Data quality checks</li>
-        <li>Longitudinal data analysis</li>
-        <li>Survey data analysis</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Statistical & Computational Skills</h3>
-      <ul>
-        <li>Generalized linear models</li>
-        <li>Mixed-effects models</li>
-        <li>Structural equation modelling</li>
-        <li>Bayesian modelling</li>
-        <li>Agent-based modelling</li>
-        <li>Natural language processing and Text analysis</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Programming & Software</h3>
-      <ul>
-        <li>R</li>
-        <li>Python</li>
-        <li>SPSS</li>
-        <li>NetLogo</li>
-        <li>R Markdown</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Communication & Creative Skills</h3>
-      <ul>
-        <li>Science communication</li>
-        <li>Academic writing for broader audiences</li>
-        <li>Social media outreach for research visibility</li>
-        <li>Canva</li>
-        <li>Adobe Suite</li>
-        <li>iMovie</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-
-    <div class="contact-icons">
-      <a href="mailto:sumbulpsyc@gmail.com" aria-label="Email">
-        <i class="fa-solid fa-envelope"></i>
+      <a class="site-name" href="#home">
+        Sumbul Syed
       </a>
 
-      <a href="https://www.linkedin.com/in/ssyed-" target="_blank" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <a href="https://sumbulsyed.substack.com" target="_blank" aria-label="Substack">
-      <i class="fa-solid fa-newspaper"></i>
-    </a>
+      <nav
+        id="site-navigation"
+        class="site-navigation"
+        aria-label="Main navigation"
+      >
+        <a href="#home">Home</a>
+        <a href="#research-lines">Research Lines</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <a href="https://www.instagram.com/sumbulsyed95/?utm_source=qr" target="_blank" aria-label="Instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://www.youtube.com/@sumbulsyed95" target="_blank" aria-label="YouTube">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
     </div>
-  </section>
+
+  </header>
+
+
+  <main>
+
+    <!-- Home / Biography -->
+    <section id="home" class="about-section">
+
+      <div class="about-grid">
+
+        <!-- Profile column -->
+        <aside class="profile-column">
+
+          <img
+            src="./profile.jpg"
+            alt="Portrait of Sumbul Syed"
+            class="profile-photo"
+          >
+
+          <h1>Sumbul Syed</h1>
+
+          <p class="professional-title">
+            Behavioural Science Researcher
+          </p>
+
+          <p class="affiliation">
+            Research Officer<br>
+            Tilburg University
+          </p>
+
+          <div class="profile-socials">
+
+            <a
+              href="mailto:sumbulpsyc@gmail.com"
+              aria-label="Email Sumbul Syed"
+              title="Email"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-email"></use>
+              </svg>
+            </a>
+
+            <!-- Replace # with your complete LinkedIn URL -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              title="LinkedIn"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-linkedin"></use>
+              </svg>
+            </a>
+
+            <!-- Replace # with your complete Substack URL -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Substack"
+              title="Substack"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-substack"></use>
+              </svg>
+            </a>
+
+            <!-- Replace # with your complete Instagram URL -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram profile"
+              title="Instagram"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-instagram"></use>
+              </svg>
+            </a>
+
+            <!-- Replace # with your complete YouTube URL -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube channel"
+              title="YouTube"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-youtube"></use>
+              </svg>
+            </a>
+
+          </div>
+
+        </aside>
+
+
+        <!-- Biography column -->
+        <div class="biography-column">
+
+          <h2>Biography</h2>
+
+          <p>
+            I am a behavioural science researcher with a multidisciplinary
+            academic background spanning economics, counselling psychology,
+            mental health, and behavioural science.
+          </p>
+
+          <p>
+            I completed a Research Master’s in Behavioural Science at Radboud
+            University, where my major research project used agent-based
+            modelling to examine how political attitudes and climate concerns
+            shape red meat consumption among wealthy Indians. My research
+            interests sit at the intersection of human behaviour,
+            sustainability, computational modelling, and social change.
+          </p>
+
+          <p>
+            Alongside research, I have worked across academic publishing,
+            open science, and science communication through roles at Tilburg
+            University, Radboud University Press, Brain Communications, and
+            the Science Media Centre. I am particularly interested in making
+            research and scholarly communication more accessible, transparent,
+            and useful beyond academic settings.
+          </p>
+
+
+          <div class="biography-details">
+
+            <!-- Interests -->
+            <div class="interests-column">
+
+              <h3>Interests</h3>
+
+              <ul class="interests-list">
+                <li>Behaviour change and decision-making</li>
+                <li>Sustainability and food choices</li>
+                <li>Computational modelling</li>
+                <li>Open science</li>
+                <li>Academic publishing</li>
+                <li>Science communication</li>
+              </ul>
+
+            </div>
+
+
+            <!-- Education -->
+            <div class="education-column">
+
+              <h3>Education</h3>
+
+              <div class="education-list">
+
+                <div class="education-item">
+
+                  <svg class="education-icon" aria-hidden="true">
+                    <use href="#icon-graduation"></use>
+                  </svg>
+
+                  <div>
+                    <p class="degree">
+                      Research Master’s Behavioural Science
+                    </p>
+
+                    <p class="institution">
+                      Radboud University, The Netherlands
+                    </p>
+                  </div>
+
+                </div>
+
+
+                <div class="education-item">
+
+                  <svg class="education-icon" aria-hidden="true">
+                    <use href="#icon-graduation"></use>
+                  </svg>
+
+                  <div>
+                    <p class="degree">
+                      MSc Psychology of Mental Health
+                    </p>
+
+                    <p class="institution">
+                      University of Edinburgh, Scotland
+                    </p>
+                  </div>
+
+                </div>
+
+
+                <div class="education-item">
+
+                  <svg class="education-icon" aria-hidden="true">
+                    <use href="#icon-graduation"></use>
+                  </svg>
+
+                  <div>
+                    <p class="degree">
+                      PG Diploma Counselling Psychology
+                    </p>
+
+                    <p class="institution">
+                      Amity University, India
+                    </p>
+                  </div>
+
+                </div>
+
+
+                <div class="education-item">
+
+                  <svg class="education-icon" aria-hidden="true">
+                    <use href="#icon-graduation"></use>
+                  </svg>
+
+                  <div>
+                    <p class="degree">
+                      BA (Honours) Economics
+                    </p>
+
+                    <p class="institution">
+                      Amity University, India
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Research Lines -->
+    <section id="research-lines" class="research-section">
+
+      <div class="section-grid">
+
+        <div class="section-heading">
+          <h2>Research Lines</h2>
+        </div>
+
+        <div class="research-list">
+
+          <article class="research-item">
+
+            <h3>
+              Behaviour, Food, and Sustainability
+            </h3>
+
+            <p>
+              I am interested in how psychological, social, and political
+              factors shape food-related decisions and environmentally
+              significant behaviour. My Research Master’s project examined
+              the relationship between political attitudes, climate concerns,
+              and red meat consumption among wealthy Indians.
+            </p>
+
+          </article>
+
+
+          <article class="research-item">
+
+            <h3>
+              Computational and Quantitative Behavioural Research
+            </h3>
+
+            <p>
+              I use quantitative and computational approaches to study
+              behavioural processes across individual and population levels.
+              My experience includes agent-based modelling, longitudinal and
+              survey data, generalized linear models, mixed-effects models,
+              structural equation modelling, and Bayesian modelling.
+            </p>
+
+          </article>
+
+
+          <article class="research-item">
+
+            <h3>
+              Open Science, Publishing, and Science Communication
+            </h3>
+
+            <p>
+              I am interested in improving how research is produced,
+              communicated, and made accessible. My work spans diamond
+              open-access publishing, editorial workflows, research
+              dissemination, public-facing science communication, and
+              engagement with open and reproducible research practices.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+
+      <div class="section-grid">
+
+        <div class="section-heading">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="contact-content">
+
+          <p>
+            I am happy to connect with researchers, publishers, science
+            communicators, and others working across behavioural science,
+            sustainability, open science, and public engagement.
+          </p>
+
+          <div class="contact-links">
+
+            <a
+              href="mailto:sumbulpsyc@gmail.com"
+              class="contact-link"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-email"></use>
+              </svg>
+
+              <span>sumbulpsyc@gmail.com</span>
+            </a>
+
+
+            <!-- Replace # with your complete LinkedIn URL -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-linkedin"></use>
+              </svg>
+
+              <span>LinkedIn</span>
+            </a>
+
+
+            <!-- Replace # with your complete Substack URL -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-substack"></use>
+              </svg>
+
+              <span>Substack</span>
+            </a>
+
+
+            <!-- Replace # with your complete Instagram URL -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-instagram"></use>
+              </svg>
+
+              <span>Instagram</span>
+            </a>
+
+
+            <!-- Replace # with your complete YouTube URL -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <svg aria-hidden="true">
+                <use href="#icon-youtube"></use>
+              </svg>
+
+              <span>YouTube</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <p>© 2026 Sumbul Syed</p>
+  </footer>
+
+
+  <!-- Mobile navigation -->
+  <script>
+    const navigationButton = document.querySelector(".nav-toggle");
+    const navigationMenu = document.querySelector(".site-navigation");
+    const navigationLinks = document.querySelectorAll(".site-navigation a");
+
+    navigationButton.addEventListener("click", function () {
+      const isOpen = navigationMenu.classList.toggle("is-open");
+
+      navigationButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      navigationButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+    });
+
+    navigationLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navigationMenu.classList.remove("is-open");
+        navigationButton.setAttribute("aria-expanded", "false");
+        navigationButton.setAttribute(
+          "aria-label",
+          "Open navigation"
+        );
+      });
+    });
+  </script>
 
 </body>
 </html>
